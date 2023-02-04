@@ -136,7 +136,7 @@ class _HorizentalCardsState extends State<HorizentalCards> {
                             IconButton(
                               onPressed: () {
                                 setState(() {
-                                  Data1.cart.add(product);
+                                  Data1.favorate.add(product);
 
                                   if (heartColor == Colors.white38) {
                                     heartColor = Colors.red;

@@ -58,7 +58,7 @@ class _loginState extends State<login> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'About EQRAA',
+                                  'لماذا صفحة ',
                                   style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 16),
                                 ),
                               ],
@@ -73,7 +73,7 @@ class _loginState extends State<login> {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: const [
                                 Text(
-                                  'Terms and Conditions',
+                                  'الشروط والاحكام',
                                   style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 16),
                                 ),
                               ],
@@ -103,7 +103,7 @@ class _loginState extends State<login> {
                             width: 12,
                           ),
                           Text(
-                            'Name',
+                            'الإسم',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 68, 124), fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -136,7 +136,7 @@ class _loginState extends State<login> {
                             width: 12,
                           ),
                           Text(
-                            'password',
+                            'كلمة المرور',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 68, 124), fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -194,7 +194,7 @@ class _loginState extends State<login> {
                               builder: (context) {
                                 return AlertDialog(
                                     title: const Text(
-                                      'user name or password not correct',
+                                      'الاسم او كلمة المرور غير صحيحه ',
                                       style: TextStyle(color: Colors.white70),
                                     ),
                                     actions: [
@@ -206,7 +206,7 @@ class _loginState extends State<login> {
                                               MaterialPageRoute(builder: (context) => const navigationBar()),
                                             );
                                           },
-                                          child: const Text(' Guest '),
+                                          child: const Text(' الدخول كزائر '),
                                         ),
                                         IconButton(
                                           onPressed: () {
@@ -221,7 +221,7 @@ class _loginState extends State<login> {
                             );
                           }
                         },
-                        child: const Text('Login'),
+                        child: const Text('تسجيل الدخول'),
                       ),
                     ],
                   ),

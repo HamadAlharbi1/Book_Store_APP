@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-import '../contents/playcard.dart';
-
 class Playpage extends StatefulWidget {
   const Playpage({super.key});
   static const Mycolor = Color.fromARGB(184, 232, 229, 229);
@@ -20,7 +18,7 @@ class _PlaypageState extends State<Playpage> {
   final _c3 = YoutubePlayerController.fromVideoId(
       videoId: 'kz_9J3VST_Y', params: const YoutubePlayerParams(showFullscreenButton: true), autoPlay: false);
 
-  final _pageC = PageController(initialPage: 2);
+  final _pageC = PageController(initialPage: 0);
 
   @override
   void dispose() {
@@ -134,8 +132,6 @@ class _PlaypageState extends State<Playpage> {
                       )),
                 ],
               ),
-
-              const play_card(Playbackground: Playpage.Playbackground, Mycolor: Playpage.Mycolor),
             ]),
           ),
         ]),

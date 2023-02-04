@@ -23,7 +23,7 @@ class _navigationBarState extends State<navigationBar> {
       const sections(),
       const DiscoverPage(),
       const Playpage(),
-      const cart(),
+      const favorate(),
       const subscribe(),
     ];
 

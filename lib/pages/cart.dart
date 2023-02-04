@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../modols/data.dart';
 
-class cart extends StatelessWidget {
-  const cart({super.key});
+class favorate extends StatelessWidget {
+  const favorate({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class cart extends StatelessWidget {
           child: ListView(children: [
             Column(
               children: [
-                for (var product in Data1.cart)
+                for (var product in Data1.favorate)
                   Padding(
                     padding: const EdgeInsets.all(30),
                     child: SizedBox(

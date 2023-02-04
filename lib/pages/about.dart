@@ -29,15 +29,20 @@ class about extends StatelessWidget {
                     height: 32,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      SizedBox(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const SizedBox(
                         width: 12,
                       ),
-                      Text(
-                        'About Eqraa',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 23, 23, 23), fontSize: 32, fontWeight: FontWeight.bold),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: const [
+                          Text(
+                            'صفحة ',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 23, 23, 23), fontSize: 32, fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -45,13 +50,13 @@ class about extends StatelessWidget {
                     height: 16,
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(left: 12, right: 12),
+                    padding: EdgeInsets.all(12),
                     child: Expanded(
                       child: Text(
-                          'works to connect readers with independent booksellers all over the world.We believe local bookstores are essential community hubs that foster culture, curiosity, and a love of reading, and were committed to helping them thrive. Every purchase on the site financially supports independent bookstores. Our platform gives independent bookstores tools to compete online and financial support to help them maintain their presence in local communities.',
+                          ' تطبيق بسيط الهدف منه المساعده على القراءه أو الاستماع الى الكتب من خلال الكتب الالكترونيه والصوتيه.. كذلك ننشر هنا اقتباسات بسيطه لاشهر الكتاب والناشرين في محاولة للإستفاده من هذا الارث الباقي    ',
                           style: TextStyle(
                               color: Color.fromARGB(255, 23, 23, 23), fontSize: 12, fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.justify,
+                          textAlign: TextAlign.right,
                           overflow: TextOverflow.clip),
                     ),
                   ),

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/modols/data.dart';
 
+import '../pages/Listen.dart';
 import '../pages/bookdetails.dart';
 import '../pages/reading_page.dart';
+
+var heartColor;
 
 class Suggested extends StatefulWidget {
   const Suggested({
@@ -94,7 +97,8 @@ class _SuggestedState extends State<Suggested> {
                           children: [
                             IconButton(
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) =>  reading_page(value: product,)));
+                                Navigator.push(
+                                    context, MaterialPageRoute(builder: (context) => reading_page(value: product)));
                               },
                               icon: const Icon(
                                 Icons.bookmark,
@@ -111,14 +115,34 @@ class _SuggestedState extends State<Suggested> {
                                             )));
                               },
                               child: const Icon(
-                                Icons.search,
+                                Icons.find_in_page,
+                                color: Color.fromARGB(255, 154, 154, 154),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Listen(
+                                              value: product,
+                                            )));
+                              },
+                              child: const Icon(
+                                Icons.music_video,
                                 color: Color.fromARGB(255, 154, 154, 154),
                               ),
                             ),
                             IconButton(
                               onPressed: () {
                                 setState(() {
-                                  Data1.cart.add(product);
+                                  Data1.favorate.add(product);
+
+                                  if (heartColor == Colors.white38) {
+                                    heartColor = Colors.red;
+                                  } else {
+                                    heartColor = Colors.white38;
+                                  }
                                 });
                               },
                               icon: const Icon(
