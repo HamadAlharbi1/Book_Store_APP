@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/modols/data.dart';
 
-class Bookdetails extends StatelessWidget {
+class Author extends StatelessWidget {
   final Product value; // object
 
-  const Bookdetails({super.key, required this.value}); // construter
+  const Author({super.key, required this.value}); // construter
 
   @override
   Widget build(BuildContext context) {

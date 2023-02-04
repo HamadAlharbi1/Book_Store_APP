@@ -12,7 +12,7 @@ class TermsandConditions extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-            const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
+            const Color.fromARGB(255, 24, 75, 157).withOpacity(0.8),
             const Color.fromARGB(255, 24, 24, 24),
           ]),
         ),
@@ -36,15 +36,15 @@ class TermsandConditions extends StatelessWidget {
                       height: 32,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
                         SizedBox(
-                          width: 12,
+                          width: 70,
                         ),
                         Text(
-                          'Terms and Conditions',
+                          'الشروط والاحكام',
+                          textAlign: TextAlign.right,
                           style: TextStyle(
-                              color: Color.fromARGB(255, 23, 23, 23), fontSize: 32, fontWeight: FontWeight.bold),
+                              color: Color.fromARGB(255, 30, 0, 84), fontSize: 32, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),

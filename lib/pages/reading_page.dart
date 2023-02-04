@@ -12,8 +12,8 @@ class reading_page extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-            const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-            const Color.fromARGB(255, 24, 24, 24),
+            const Color.fromARGB(255, 0, 54, 95).withOpacity(0.8),
+            const Color.fromARGB(255, 68, 68, 68),
           ]),
         ),
         child: ListView(

@@ -16,7 +16,7 @@ class Data1 {
   static List<Product> horizentalCards = [
     Product(
         image:
-            'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1555709504i/45176947._UY2048_SS2048_.jpg',
+            'https://mktbtypdf.com/wp-content/uploads/2021/09/%D9%83%D8%A8%D8%B1-%D8%AF%D9%85%D8%A7%D8%BA%D9%83-%D8%AE%D8%A7%D9%84%D8%AF-%D8%B5%D8%A7%D9%84%D8%AD-%D8%A7%D9%84%D9%85%D9%86%D9%8A%D9%81-pdf.jpg',
         name: 'كبر دماغك',
         author: 'Harvey Ecker',
         describtion:
@@ -24,8 +24,7 @@ class Data1 {
         // ignore: prefer_single_quotes
         PDfurl: "https://ar.frenchpdf.com/wp-content/uploads/2019/01/asrar-aaqal-lmilyonir-FrenchPDF.pdf"),
     Product(
-        image:
-            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        image: 'https://www.daralsalam.com/Files/Images/880/25175197.jpg',
         name: 'اقرأ الناس كأنهم كتاب',
         author: ' باتريك كينغ ',
         describtion:
@@ -34,7 +33,7 @@ class Data1 {
         PDfurl: "https://ar.frenchpdf.com/wp-content/uploads/2019/01/asrar-aaqal-lmilyonir-FrenchPDF.pdf"),
     Product(
         image:
-            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+            'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1627168697i/58621719.jpg',
         name: 'الكل يكذب',
         author: ' دافيدوتس .. سيث ستيفنز',
         describtion:
@@ -50,8 +49,7 @@ class Data1 {
         // ignore: prefer_single_quotes
         PDfurl: "https://ar.frenchpdf.com/wp-content/uploads/2019/01/asrar-aaqal-lmilyonir-FrenchPDF.pdf"),
     Product(
-        image:
-            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        image: 'https://cdn.salla.sa/mQOoE/cOKu4NoIUFqzQLd55sKdokf4srzxJCszECVFCMZ3.png',
         name: 'حياة في الادارة',
         author: ' الدكتور غازي القصيبي',
         describtion:
@@ -92,11 +90,41 @@ class Data1 {
         // ignore: prefer_single_quotes
         PDfurl: ""),
   ];
+  static List<Product> W2 = [
+    Product(
+        image: 'https://pbs.twimg.com/profile_images/1120383829972344832/JmjnCDVA_400x400.jpg',
+        name: '',
+        author: ' ',
+        describtion: '',
+        // ignore: prefer_single_quotes
+        PDfurl: ""),
+    Product(
+        image: 'https://www.alwatan.com.sa/uploads/images/2022/03/02/785304.png',
+        name: '',
+        author: '',
+        describtion: ' .',
+        // ignore: prefer_single_quotes
+        PDfurl: ""),
+    Product(
+        image: 'https://cdn.abjjad.com/pub/81ff698e-7166-43b7-b625-31d696cda0e9-250X250.png',
+        name: '',
+        author: ' ',
+        describtion: '',
+        // ignore: prefer_single_quotes
+        PDfurl: ""),
+    Product(
+        image: 'https://www.sandroses.com/media/k2/items/cache/0024d930fc8cd006223567968b870c60_L.jpg',
+        name: '',
+        author: '  عباس محمود العقاد',
+        describtion: 'يقول لك المرشدون : اقرأ ما ينفعك ، و لكني أقول : بل انتفع بما تقرأ..',
+        // ignore: prefer_single_quotes
+        PDfurl: ""),
+  ];
 
   static List<Product> suggested = [
     Product(
         image: 'https://m.media-amazon.com/images/I/31A8fpNfTsL._SX311_BO1,204,203,200_.jpg',
-        name: 'ابق قوي (365) يوم في السنة',
+        name: 'ابق قوي ',
         author: 'ديمي لوفاتو',
         describtion:
             'قد لخصت ديمي لوفاتو الدروس التي تعلمتها خلال رحلتها في الحياة في هذا الكتاب وهي مجموعة مكونة من 365 يوماً من أكثر أفكارها صراحة وشجاعة وتفاؤلاً بكلماتها الخاصة وتأملاتها وأهدافها بالإضافة لمقتبسات ألهمتها، وهي تخاطب كل شخص في كل مكان في رحلته الخاصة ولكل من يحتاج للراحة والإلهام والدافع ليبقى قوياً كل يوم.',
@@ -104,7 +132,7 @@ class Data1 {
         PDfurl: "https://ar.frenchpdf.com/wp-content/uploads/2019/01/asrar-aaqal-lmilyonir-FrenchPDF.pdf"),
     Product(
         image: 'https://m.media-amazon.com/images/I/31e1rMHZouL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
-        name: 'السماح بالرحيل : الطريق نحو التسليم',
+        name: 'السماح بالرحيل ',
         author: ' ديفيد هاوكينز',
         describtion:
             'كتاب Letting Go: The Pathway of Surrender يصف وسيلة بسيطة وفعالة يمكن من خلالها التخلص من العقبات التي تعيق التنوير وتصبح خالية من السلبية. خلال العقود العديدة من ممارسة الطب النفسي السريري للدكتور هوكينز، كان الهدف الأساسي هو البحث عن أكثر الطرق فعالية لتخفيف المعاناة البشرية بجميع أشكالها العديدة. تم العثور على أن تقنية التخلي (الاستسلام) ذات فائدة عملية كبيرة وتم وصفها في هذا الكتاب.',
@@ -112,15 +140,15 @@ class Data1 {
         PDfurl: "https://ar.frenchpdf.com/wp-content/uploads/2019/01/asrar-aaqal-lmilyonir-FrenchPDF.pdf"),
     Product(
         image: 'https://m.media-amazon.com/images/I/416iMg3baQL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
-        name: 'كتاب قوة عقلك الباطن',
+        name: 'قوة عقلك الباطن',
         author: 'جوزيف ميرفى',
         describtion:
             'يعتبر كتاب (قوة عقلك الباطن ) للكاتب الأيرلندي جوزيف ميرفي من أهم الكتب في مجال التنمية البشرية واكتشاف الذات في تاريخ هذا العلم ، حيث يأخذك الكاتب في رحلة إلى أعماق نفسك وشخصيتك وعقلك الباطن ، ويتناول الكتاب 20 قضية أساسية عن عقل البشر',
         // ignore: prefer_single_quotes
         PDfurl: "https://ar.frenchpdf.com/wp-content/uploads/2019/01/asrar-aaqal-lmilyonir-FrenchPDF.pdf"),
     Product(
-        image: 'https://m.media-amazon.com/images/I/41rsA4rz+CL._SY498_BO1,204,203,200_.jpg',
-        name: 'فن قول لا، كيف تتمسك برايك',
+        image: 'https://store.jarirreader.com/images/162x222/13738.jpg',
+        name: 'فن قول لا',
         author: ' Damon Zhariades',
         describtion:
             'مؤلف الكتاب؛ ديمون زهاريادس، هو مؤلف الكتب الافضل مبيعًا في قوائم امازون.يقدم لك نصائح تفصيليه وقابله للتطبيق عن كيفية زيادة انتاجيتك وتحسين ادارة الوقت، وتصميم نمط حياه اكثر جدوى.سيوضح لك هذا الكتاب طريقة وضع الحدود يينك وبين الاخرين، وان تتمسك بموقفك وتجعلهم يحترمونك في الوقت نفسه.',
@@ -140,7 +168,7 @@ class Data1 {
     Product(
         image: 'https://m.media-amazon.com/images/I/41-vo-Iiu3L._SX331_BO1,204,203,200_.jpg',
         name: 'اسرار عقل المليونير',
-        author: 'Gedocsindividuals\rulescommonavoid-non-ascii-symbolsorge Klasson',
+        author: 'ت.هارف إيكر',
         describtion:
             'نبذة الناشر:هل تساءلت يوماً لماذا يبدو أن بعض الناس يحققون الثراء بمنتهى السهولة، بينما بُقدر الآخرين أن يحيوا حياة كادحة؟ هل الفرق يوجد في مستوى تعليمهم، أو ذكائهم، أو مهاراتهم، أو عادات العمل، أو إنضباطهم، أو إتصالهم، أو الحظ، أو إختيار الوظيفة المناسبة، أو نوع مشروعاتهم، أو نوع إستثماراتهم',
         // ignore: prefer_single_quotes

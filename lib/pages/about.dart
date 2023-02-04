@@ -8,10 +8,10 @@ class about extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(32),
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-            const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
+            const Color.fromARGB(242, 4, 69, 101).withOpacity(0.8),
             const Color.fromARGB(255, 24, 24, 24),
           ]),
         ),
@@ -40,7 +40,7 @@ class about extends StatelessWidget {
                           Text(
                             'صفحة ',
                             style: TextStyle(
-                                color: Color.fromARGB(255, 23, 23, 23), fontSize: 32, fontWeight: FontWeight.bold),
+                                color: Color.fromARGB(255, 23, 0, 87), fontSize: 32, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -55,7 +55,7 @@ class about extends StatelessWidget {
                       child: Text(
                           ' تطبيق بسيط الهدف منه المساعده على القراءه أو الاستماع الى الكتب من خلال الكتب الالكترونيه والصوتيه.. كذلك ننشر هنا اقتباسات بسيطه لاشهر الكتاب والناشرين في محاولة للإستفاده من هذا الارث الباقي    ',
                           style: TextStyle(
-                              color: Color.fromARGB(255, 23, 23, 23), fontSize: 12, fontWeight: FontWeight.bold),
+                              color: Color.fromARGB(255, 23, 0, 87), fontSize: 20, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.right,
                           overflow: TextOverflow.clip),
                     ),

@@ -31,8 +31,8 @@ class _loginState extends State<login> {
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-              const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-              const Color.fromARGB(255, 24, 24, 24),
+              const Color.fromARGB(255, 65, 65, 191).withOpacity(0.8),
+              const Color.fromARGB(255, 61, 61, 61),
             ]),
           ),
           child: Container(
@@ -40,49 +40,37 @@ class _loginState extends State<login> {
             child: ListView(
               children: [
                 const SizedBox(
-                  height: 200,
+                  height: 50,
                 ),
-                SizedBox(
-                  height: 100,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => const about()));
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'لماذا صفحة ',
-                                  style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 16),
-                                ),
-                              ],
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context, MaterialPageRoute(builder: (context) => const TermsandConditions()));
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: const [
-                                Text(
-                                  'الشروط والاحكام',
-                                  style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 16),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                Container(
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: Image.network(
+                        'https://assets.materialup.com/uploads/290503c8-aaf1-4f39-8502-f67076787f42/preview.jpg')),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const about()));
+                      },
+                      child: const Text(
+                        'لماذا صفحة ',
+                        style:
+                            TextStyle(color: Color.fromARGB(255, 0, 40, 60), fontWeight: FontWeight.bold, fontSize: 16),
                       ),
-                    ],
-                  ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TermsandConditions()));
+                      },
+                      child: const Text(
+                        'الشروط والاحكام',
+                        style:
+                            TextStyle(color: Color.fromARGB(255, 0, 40, 60), fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 16,
@@ -97,7 +85,7 @@ class _loginState extends State<login> {
                   child: Column(
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: const [
                           SizedBox(
                             width: 12,
@@ -130,7 +118,7 @@ class _loginState extends State<login> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: const [
                           SizedBox(
                             width: 12,
@@ -164,7 +152,10 @@ class _loginState extends State<login> {
                               context: context,
                               builder: (context) {
                                 return AlertDialog(
-                                  title: const Text('welcome'),
+                                  title: const Text(
+                                    'welcome',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
                                   actions: [
                                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                                       IconButton(
@@ -184,7 +175,7 @@ class _loginState extends State<login> {
                                       ),
                                     ]),
                                   ],
-                                  backgroundColor: const Color.fromARGB(255, 68, 68, 68),
+                                  backgroundColor: const Color.fromARGB(255, 0, 48, 83),
                                 );
                               },
                             );
@@ -193,30 +184,31 @@ class _loginState extends State<login> {
                               context: context,
                               builder: (context) {
                                 return AlertDialog(
-                                    title: const Text(
-                                      'الاسم او كلمة المرور غير صحيحه ',
-                                      style: TextStyle(color: Colors.white70),
-                                    ),
-                                    actions: [
-                                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                        ElevatedButton(
-                                          onPressed: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(builder: (context) => const navigationBar()),
-                                            );
-                                          },
-                                          child: const Text(' الدخول كزائر '),
-                                        ),
-                                        IconButton(
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                          icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151)),
-                                        ),
-                                      ]),
-                                    ],
-                                    backgroundColor: const Color.fromARGB(255, 68, 68, 68));
+                                  title: const Text(
+                                    'الاسم او كلمة المرور غير صحيحه ',
+                                    style: TextStyle(color: Colors.white70),
+                                  ),
+                                  actions: [
+                                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(builder: (context) => const navigationBar()),
+                                          );
+                                        },
+                                        child: const Text(' الدخول كزائر '),
+                                      ),
+                                      IconButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151)),
+                                      ),
+                                    ]),
+                                  ],
+                                  backgroundColor: const Color.fromARGB(255, 0, 48, 83),
+                                );
                               },
                             );
                           }

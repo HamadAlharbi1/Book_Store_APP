@@ -1,31 +1,89 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/modols/data.dart';
 
-class authors extends StatelessWidget {
-  const authors({super.key});
-  static const Mycolor = Color.fromARGB(184, 232, 229, 229);
-  static const Playbackground = Color.fromARGB(53, 113, 114, 113);
+import '../contents/navigationBar.dart';
+
+class authors extends StatefulWidget {
+  const authors({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<authors> createState() => _authors();
+}
+
+class _authors extends State<authors> {
+  var heartColor = Colors.white38;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-                const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-                const Color.fromARGB(255, 24, 24, 24),
-              ]),
+    return SizedBox(
+      height: 100,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          for (var product in Data1.W2)
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: InkWell(
+                onTap: (() {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: const Text(
+                          'انتقال الى صفحة المؤلف ؟',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        actions: [
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const navigationBar()),
+                                );
+                              },
+                              icon: const Icon(Icons.login, color: Color.fromARGB(255, 151, 151, 151)),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151)),
+                            ),
+                          ]),
+                        ],
+                        backgroundColor: const Color.fromARGB(245, 35, 116, 134),
+                      );
+                    },
+                  );
+                }),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(200),
+                    ),
+                  ),
+                  clipBehavior: Clip.hardEdge,
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(16),
+                          ),
+                        ),
+                        clipBehavior: Clip.hardEdge,
+                        child: Image(image: NetworkImage(product.image), height: 100),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
-            child: Column(children: const [
-              SizedBox(height: 20),
-              Divider(color: Colors.grey),
-              SizedBox(height: 32),
-            ]),
-          ),
-        ]),
+        ],
       ),
-      backgroundColor: Mycolor,
     );
   }
 }
