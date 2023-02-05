@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/modols/data.dart';
 
-import '../contents/navigationBar.dart';
+import 'authdetails.dart';
 
 class authors extends StatefulWidget {
   const authors({
@@ -41,7 +41,10 @@ class _authors extends State<authors> {
                               onPressed: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => const navigationBar()),
+                                  MaterialPageRoute(
+                                      builder: (context) => Author(
+                                            value: product,
+                                          )),
                                 );
                               },
                               icon: const Icon(Icons.login, color: Color.fromARGB(255, 151, 151, 151)),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
+import 'package:fwfh_webview/fwfh_webview.dart';
 import 'package:project_2/modols/data.dart';
 
 class Author extends StatelessWidget {
@@ -9,75 +11,84 @@ class Author extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-                const Color.fromARGB(255, 0, 65, 76).withOpacity(0.8),
-                const Color.fromARGB(255, 0, 53, 72),
-              ]),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
+            const Color.fromARGB(255, 0, 54, 95).withOpacity(0.8),
+            const Color.fromARGB(255, 68, 68, 68),
+          ]),
+        ),
+        child: ListView(
+          padding: const EdgeInsets.all(30),
+          children: [
+            const SizedBox(
+              height: 32,
             ),
-            child: Column(children: [
-              const SizedBox(
-                height: 100,
+            Container(
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(102, 220, 220, 219),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
               ),
-              Container(
-                decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(12))),
-                clipBehavior: Clip.hardEdge,
-                child: Image.network(value.image, height: 300),
-              ),
-              const SizedBox(
-                height: 32,
-              ),
-              Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.white),
-                  margin: const EdgeInsets.all(0),
-                  clipBehavior: Clip.hardEdge,
-                  child: Text(value.name,
-                      style: const TextStyle(color: Colors.blueGrey, fontSize: 20, fontWeight: FontWeight.bold))),
-              const SizedBox(
-                height: 32,
-              ),
-              Container(
-                margin: const EdgeInsets.all(24),
-                child: Text(
-                  value.author,
-                  style: const TextStyle(
-                      color: Color.fromARGB(255, 207, 206, 206), fontSize: 12, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.justify,
-                  overflow: TextOverflow.clip,
+              child: Container(
+                decoration: const BoxDecoration(
+                    color: Color.fromARGB(102, 220, 220, 219), borderRadius: BorderRadius.all(Radius.circular(12))),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 32,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          width: 12,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: const Icon(Icons.arrow_back, size: 32, color: Color.fromARGB(255, 10, 0, 65))),
+                              const SizedBox(
+                                width: 50,
+                              ),
+                              Text(value.name,
+                                  style: const TextStyle(
+                                      color: Color.fromARGB(255, 30, 0, 84), fontSize: 20, fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.right),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    SizedBox(
+                      height: 800,
+                      child: HtmlWidget(
+                        '<iframe src=${value.PDfurl}></iframe>',
+                        factoryBuilder: () => MyWidgetFactory(),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  color: const Color.fromARGB(155, 255, 255, 255),
-                ),
-                margin: const EdgeInsets.symmetric(horizontal: 64),
-                child: Text(
-                  value.describtion,
-                  style: const TextStyle(
-                      color: Color.fromARGB(255, 46, 46, 46), fontSize: 12, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.justify,
-                  overflow: TextOverflow.clip,
-                ),
-              ),
-              IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151))),
-              const SizedBox(
-                height: 350,
-              ),
-            ]),
-          ),
-        ],
+            ),
+            IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151))),
+          ],
+        ),
       ),
     );
   }
 }
+
+class MyWidgetFactory extends WidgetFactory with WebViewFactory {}

@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:project_2/modols/data.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import 'playpage.dart';
 import 'settings_page.dart';
 
 class Listen extends StatefulWidget {
-  final Product value; // object
-
-  const Listen({super.key, required this.value});
+  const Listen({
+    super.key,
+  });
   @override
   State<Listen> createState() => _ListenState();
 }
 
 class _ListenState extends State<Listen> {
   final _controller = YoutubePlayerController.fromVideoId(
-      videoId: 'DGVoQBr9Dq4', params: const YoutubePlayerParams(showFullscreenButton: true), autoPlay: false);
+      videoId: 'm3CYbkxGbLw', params: const YoutubePlayerParams(showFullscreenButton: true), autoPlay: false);
   final _c2 = YoutubePlayerController.fromVideoId(
       videoId: 'DGVoQBr9Dq4', params: const YoutubePlayerParams(showFullscreenButton: true), autoPlay: false);
   final _c3 = YoutubePlayerController.fromVideoId(
@@ -42,8 +41,8 @@ class _ListenState extends State<Listen> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-                  const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-                  const Color.fromARGB(255, 24, 24, 24)
+                  const Color.fromARGB(255, 216, 216, 255).withOpacity(0.8),
+                  const Color.fromARGB(255, 1, 102, 82)
                 ])),
             child: Column(children: [
               const SizedBox(
@@ -54,12 +53,16 @@ class _ListenState extends State<Listen> {
                   child: ListView(children: [
                     Container(
                         padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-                          const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-                          const Color.fromARGB(255, 24, 24, 24)
-                        ])),
+                        decoration: const BoxDecoration(),
                         child: Column(children: [
+                          Container(
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                            child: Image.network(
+                              'https://play-lh.googleusercontent.com/4Q6Ekl8_GTp6WU6iBZkh9MPpOsiP6gkZ2rAOsrJfYRKqxyl-tQtRm-WxB5Vf7KIUt88',
+                              height: 130,
+                            ),
+                          ),
                           const SizedBox(height: 20),
                           SizedBox(
                               width: 400,
@@ -79,7 +82,8 @@ class _ListenState extends State<Listen> {
                                               child: SizedBox(
                                                   width: 100, height: 300, child: NewWidget(controller: _controller)))),
                                       Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-                                        Text('كتاب العادات الذرية', style: TextStyle(color: Colors.blue, fontSize: 32))
+                                        Text('كتاب العادات الذرية',
+                                            style: TextStyle(color: Color.fromARGB(255, 0, 97, 97), fontSize: 20))
                                       ])
                                     ]),
                                     Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -93,7 +97,7 @@ class _ListenState extends State<Listen> {
                                                   width: 100, height: 300, child: NewWidget(controller: _c2)))),
                                       Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
                                         Text('الكتاب المسموع: افرض حضورك',
-                                            style: TextStyle(color: Colors.blue, fontSize: 32))
+                                            style: TextStyle(color: Color.fromARGB(255, 0, 97, 97), fontSize: 20))
                                       ])
                                     ]),
                                     Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -105,11 +109,9 @@ class _ListenState extends State<Listen> {
                                               clipBehavior: Clip.hardEdge,
                                               child: SizedBox(
                                                   width: 100, height: 300, child: NewWidget(controller: _c3)))),
-                                      Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                        TextButton(
-                                            onPressed: () {},
-                                            child: const Text('الأب الغني والأب الفقير',
-                                                style: TextStyle(color: Colors.blue, fontSize: 32)))
+                                      Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+                                        Text('الأب الغني والأب الفقير',
+                                            style: TextStyle(color: Color.fromARGB(255, 0, 97, 97), fontSize: 20))
                                       ])
                                     ])
                                   ])),
@@ -117,19 +119,25 @@ class _ListenState extends State<Listen> {
                           Container(
                               padding: const EdgeInsets.all(8),
                               decoration: BoxDecoration(
-                                  color: const Color.fromARGB(44, 241, 241, 241),
-                                  border: Border.all(color: const Color.fromARGB(138, 0, 0, 0), width: .2),
+                                  color: const Color.fromARGB(44, 0, 92, 68),
+                                  border: Border.all(color: const Color.fromARGB(255, 255, 255, 255), width: .2),
                                   borderRadius: BorderRadius.circular(16)),
                               child: Column(children: [
-                                const SizedBox(height: 45),
+                                const SizedBox(height: 8),
                                 Container(
-                                    padding: const EdgeInsets.all(8),
-                                    margin: const EdgeInsets.all(24),
-                                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                  padding: const EdgeInsets.all(8),
+                                  margin: const EdgeInsets.all(12),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
                                       IconButton(
                                           onPressed: () => _pageC.previousPage(
                                               duration: const Duration(seconds: 1), curve: Curves.easeIn),
-                                          icon: const Icon(Icons.fast_rewind, size: 40, color: Colors.white)),
+                                          icon: const Icon(
+                                            Icons.fast_rewind,
+                                            size: 32,
+                                            color: Color.fromARGB(255, 0, 126, 126),
+                                          )),
                                       Container(
                                           alignment: Alignment.center,
                                           child: IconButton(
@@ -137,21 +145,31 @@ class _ListenState extends State<Listen> {
                                                 Navigator.push(context,
                                                     MaterialPageRoute(builder: (context) => const SettingsPage()));
                                               },
-                                              icon: const Icon(Icons.settings,
-                                                  size: 40, color: Color.fromARGB(255, 151, 151, 151)))),
+                                              icon: const Icon(
+                                                Icons.settings,
+                                                size: 32,
+                                                color: Color.fromARGB(255, 0, 126, 126),
+                                              ))),
                                       IconButton(
-                                          onPressed: () => _pageC.nextPage(
-                                              duration: const Duration(seconds: 1), curve: Curves.easeIn),
-                                          icon: const Icon(Icons.fast_forward_sharp, size: 40, color: Colors.white))
-                                    ])),
+                                        onPressed: () =>
+                                            _pageC.nextPage(duration: const Duration(seconds: 1), curve: Curves.easeIn),
+                                        icon: const Icon(
+                                          Icons.fast_forward_sharp,
+                                          size: 32,
+                                          color: Color.fromARGB(255, 0, 126, 126),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
                                 IconButton(
                                     onPressed: () {
                                       Navigator.pop(context);
                                     },
                                     icon: const Icon(
                                       Icons.arrow_back,
-                                      size: 40,
-                                      color: Color.fromARGB(255, 151, 151, 151),
+                                      size: 32,
+                                      color: Color.fromARGB(255, 0, 126, 126),
                                     ))
                               ])),
                           const SizedBox(

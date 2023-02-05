@@ -20,8 +20,8 @@ class _SettingsPageState extends State<SettingsPage> {
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-            const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-            const Color.fromARGB(255, 24, 24, 24),
+            const Color.fromARGB(255, 252, 252, 255).withOpacity(0.8),
+            const Color.fromARGB(255, 0, 77, 68),
           ]),
         ),
         child: ListView(
@@ -56,7 +56,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151))),
+                    icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 0, 81, 87))),
               ]),
             ),
           ],

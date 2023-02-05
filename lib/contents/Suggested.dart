@@ -58,7 +58,6 @@ class _SuggestedState extends State<Suggested> {
                             padding: const EdgeInsets.only(left: 15),
                             child: Container(
                               decoration: const BoxDecoration(
-                                color: Color.fromARGB(102, 220, 220, 219),
                                 borderRadius: BorderRadius.all(Radius.circular(8)),
                               ),
                               width: 180,
@@ -69,7 +68,7 @@ class _SuggestedState extends State<Suggested> {
                                     Text(
                                       product.name,
                                       style: const TextStyle(
-                                          color: Color.fromARGB(255, 11, 0, 59),
+                                          color: Color.fromARGB(255, 255, 255, 255),
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),
                                     ),
@@ -81,7 +80,6 @@ class _SuggestedState extends State<Suggested> {
                           ),
                           Container(
                             decoration: const BoxDecoration(
-                              color: Color.fromARGB(102, 220, 220, 219),
                               borderRadius: BorderRadius.all(Radius.circular(8)),
                             ),
                             child: Row(
@@ -92,7 +90,7 @@ class _SuggestedState extends State<Suggested> {
                                     product.author,
                                     maxLines: 1,
                                     style: const TextStyle(
-                                        color: Color.fromARGB(255, 9, 0, 60),
+                                        color: Color.fromARGB(255, 240, 240, 241),
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -111,7 +109,8 @@ class _SuggestedState extends State<Suggested> {
                                 },
                                 icon: const Icon(
                                   Icons.bookmark,
-                                  color: Color.fromARGB(255, 154, 154, 154),
+                                  size: 32,
+                                  color: Color.fromARGB(255, 0, 126, 126),
                                 ),
                               ),
                               InkWell(
@@ -125,38 +124,30 @@ class _SuggestedState extends State<Suggested> {
                                 },
                                 child: const Icon(
                                   Icons.find_in_page,
-                                  color: Color.fromARGB(255, 154, 154, 154),
+                                  size: 32,
+                                  color: Color.fromARGB(255, 0, 126, 126),
                                 ),
                               ),
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Listen(
-                                                value: product,
-                                              )));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Listen()));
                                 },
                                 child: const Icon(
                                   Icons.music_video,
-                                  color: Color.fromARGB(255, 154, 154, 154),
+                                  size: 32,
+                                  color: Color.fromARGB(255, 0, 126, 126),
                                 ),
                               ),
                               IconButton(
                                 onPressed: () {
                                   setState(() {
                                     Data1.favorate.add(product);
-
-                                    if (heartColor == Colors.white38) {
-                                      heartColor = Colors.red;
-                                    } else {
-                                      heartColor = Colors.white38;
-                                    }
                                   });
                                 },
                                 icon: const Icon(
                                   Icons.favorite,
-                                  color: Color.fromARGB(255, 154, 154, 154),
+                                  size: 32,
+                                  color: Color.fromARGB(255, 0, 126, 126),
                                 ),
                               ),
                             ],

@@ -43,12 +43,22 @@ class reading_page extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            value.name,
-                            style: const TextStyle(
-                                color: Color.fromARGB(255, 23, 23, 23), fontSize: 20, fontWeight: FontWeight.bold),
-                            overflow: TextOverflow.clip,
-                            textAlign: TextAlign.justify,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: const Icon(Icons.arrow_back, size: 32, color: Color.fromARGB(255, 10, 0, 65))),
+                              const SizedBox(
+                                width: 70,
+                              ),
+                              Text(value.name,
+                                  style: const TextStyle(
+                                      color: Color.fromARGB(255, 30, 0, 84), fontSize: 20, fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.right),
+                            ],
                           ),
                         ),
                       ],

@@ -40,7 +40,7 @@ class _loginState extends State<login> {
             child: ListView(
               children: [
                 const SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Container(
                     clipBehavior: Clip.hardEdge,
@@ -105,7 +105,7 @@ class _loginState extends State<login> {
                   ),
                 ),
                 const SizedBox(
-                  height: 8,
+                  height: 32,
                 ),
                 Container(
                   padding: const EdgeInsets.all(30),

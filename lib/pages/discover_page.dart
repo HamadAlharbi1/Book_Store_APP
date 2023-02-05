@@ -59,7 +59,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     ),
                     SizedBox(
                       //    color: const Color.fromARGB(27, 255, 193, 7),
-                      height: 300,
+                      height: 240,
                       child: PageView(
                         controller: _pageC,
                         physics: const NeverScrollableScrollPhysics(),
@@ -80,13 +80,17 @@ class _DiscoverPageState extends State<DiscoverPage> {
                                             Radius.circular(12),
                                           ),
                                         ),
-                                        height: 250,
+                                        height: 200,
                                         child: Column(
                                           children: [
                                             Row(
                                               mainAxisAlignment: MainAxisAlignment.end,
                                               children: const [
-                                                Icon(Icons.format_quote_sharp, size: 50),
+                                                Icon(
+                                                  Icons.format_quote_sharp,
+                                                  size: 32,
+                                                  color: Color.fromARGB(255, 6, 0, 64),
+                                                ),
                                               ],
                                             ),
                                             Padding(
@@ -108,7 +112,11 @@ class _DiscoverPageState extends State<DiscoverPage> {
                                             Row(
                                               mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
-                                                const Icon(Icons.format_quote_sharp, size: 50),
+                                                const Icon(
+                                                  Icons.format_quote_sharp,
+                                                  size: 32,
+                                                  color: Color.fromARGB(255, 6, 0, 64),
+                                                ),
                                                 const SizedBox(width: 50),
                                                 Text(product.author,
                                                     style: const TextStyle(

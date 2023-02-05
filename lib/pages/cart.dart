@@ -12,8 +12,8 @@ class favorate extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-              const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-              const Color.fromARGB(255, 38, 38, 38),
+              const Color.fromARGB(255, 56, 106, 95).withOpacity(0.8),
+              const Color.fromARGB(255, 80, 59, 127),
             ]),
           ),
           child: ListView(children: [
@@ -49,7 +49,9 @@ class favorate extends StatelessWidget {
                                 Text(
                                   product.name,
                                   style: const TextStyle(
-                                      color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
+                                      color: Color.fromARGB(255, 0, 117, 123),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ]),
                             ),

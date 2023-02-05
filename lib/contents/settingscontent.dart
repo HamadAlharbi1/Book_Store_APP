@@ -37,8 +37,8 @@ class _SettingscontentState extends State<Settingscontent> {
               Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                 Text(
                   widget.quality.quality,
-                  style: const TextStyle(
-                      color: Color.fromARGB(255, 242, 242, 242), fontSize: 12, fontWeight: FontWeight.bold),
+                  style:
+                      const TextStyle(color: Color.fromARGB(255, 0, 81, 90), fontSize: 12, fontWeight: FontWeight.bold),
                 ),
               ]),
             ]),

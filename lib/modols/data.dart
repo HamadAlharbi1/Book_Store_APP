@@ -93,32 +93,35 @@ class Data1 {
   static List<Product> W2 = [
     Product(
         image: 'https://pbs.twimg.com/profile_images/1120383829972344832/JmjnCDVA_400x400.jpg',
-        name: '',
+        name: 'غازي القصيبي',
         author: ' ',
         describtion: '',
         // ignore: prefer_single_quotes
-        PDfurl: ""),
+        PDfurl: "https://ar.wikipedia.org/wiki/%D8%BA%D8%A7%D8%B2%D9%8A_%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%A8%D9%8A"),
     Product(
         image: 'https://www.alwatan.com.sa/uploads/images/2022/03/02/785304.png',
-        name: '',
+        name: 'عبدالله الغذامي',
         author: '',
-        describtion: ' .',
+        describtion: 'عبدالله الغذامي',
         // ignore: prefer_single_quotes
-        PDfurl: ""),
+        PDfurl:
+            'https://ar.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D9%84%D9%87_%D8%A7%D9%84%D8%BA%D8%B0%D8%A7%D9%85%D9%8A'),
     Product(
         image: 'https://cdn.abjjad.com/pub/81ff698e-7166-43b7-b625-31d696cda0e9-250X250.png',
-        name: '',
+        name: 'أحمد أبودهمان',
         author: ' ',
         describtion: '',
         // ignore: prefer_single_quotes
-        PDfurl: ""),
+        PDfurl:
+            'https://ar.wikipedia.org/wiki/%D8%A3%D8%AD%D9%85%D8%AF_%D8%A3%D8%A8%D9%88%D8%AF%D9%87%D9%85%D8%A7%D9%86'),
     Product(
         image: 'https://www.sandroses.com/media/k2/items/cache/0024d930fc8cd006223567968b870c60_L.jpg',
-        name: '',
-        author: '  عباس محمود العقاد',
-        describtion: 'يقول لك المرشدون : اقرأ ما ينفعك ، و لكني أقول : بل انتفع بما تقرأ..',
+        name: 'يوسف المحيميد',
+        author: '',
+        describtion: '',
         // ignore: prefer_single_quotes
-        PDfurl: ""),
+        PDfurl:
+            "https://ar.wikipedia.org/wiki/%D9%8A%D9%88%D8%B3%D9%81_%D8%A7%D9%84%D9%85%D8%AD%D9%8A%D9%85%D9%8A%D8%AF"),
   ];
 
   static List<Product> suggested = [

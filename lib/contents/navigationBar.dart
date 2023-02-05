@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../pages/Cart.dart';
+import '../pages/Listen.dart';
 import '../pages/discover_page.dart';
-import '../pages/playpage.dart';
 import '../pages/sections.dart';
 import '../pages/subscribe.dart';
 
@@ -20,9 +20,9 @@ class _navigationBarState extends State<navigationBar> {
   Widget build(BuildContext context) {
     Widget body;
     var pages = [
-      const sections(),
       const DiscoverPage(),
-      const Playpage(),
+      const sections(),
+      const Listen(),
       const favorate(),
       const subscribe(),
     ];
@@ -31,11 +31,11 @@ class _navigationBarState extends State<navigationBar> {
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home, color: MyIconcolor), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.book, color: MyIconcolor), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.headphones, color: Colors.white38), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite, color: MyIconcolor), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.payment, color: MyIconcolor), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'الصفحة الرئيسيه'),
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'اقتباسات'),
+          BottomNavigationBarItem(icon: Icon(Icons.headphones), label: 'الكتب المسموعه'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'المفضله'),
+          BottomNavigationBarItem(icon: Icon(Icons.payment), label: 'اشترك معنا'),
         ],
         onTap: (newIndex) {
           currentIndex = newIndex;
@@ -43,7 +43,11 @@ class _navigationBarState extends State<navigationBar> {
         },
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color.fromARGB(255, 22, 22, 22),
+        backgroundColor: const Color.fromARGB(255, 0, 76, 89),
+        selectedItemColor: const Color.fromARGB(255, 249, 124, 0),
+        showUnselectedLabels: false,
+        selectedFontSize: 10,
+        unselectedItemColor: const Color.fromARGB(255, 230, 233, 236),
       ),
     );
   }

@@ -17,8 +17,8 @@ class ThankYou extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-                const Color.fromARGB(255, 24, 24, 24),
+                const Color.fromARGB(255, 56, 106, 95).withOpacity(0.8),
+                const Color.fromARGB(255, 80, 59, 127),
               ],
             ),
           ),

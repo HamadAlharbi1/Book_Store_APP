@@ -12,11 +12,17 @@ class pay_page extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
-            const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
-            const Color.fromARGB(255, 24, 24, 24),
+            const Color.fromARGB(255, 56, 106, 95).withOpacity(0.8),
+            const Color.fromARGB(255, 80, 59, 127),
           ]),
         ),
         child: ListView(padding: const EdgeInsets.all(25), children: [
+          Container(
+            clipBehavior: Clip.hardEdge,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+            child: Image.network(
+                'https://www.bbva.es/en/content/dam/public-web/bbvaes/images/personas/productos/02_tarjetas/cards/card-aqua-mas.jpg.img.1600.1655986015861.jpg'),
+          ),
           const SizedBox(
             height: 70,
           ),
@@ -154,8 +160,8 @@ class pay_page extends StatelessWidget {
                     ),
                     child: const Text(
                       'pay',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 119, 120, 144), fontSize: 24, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(color: Color.fromARGB(255, 0, 76, 91), fontSize: 24, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
